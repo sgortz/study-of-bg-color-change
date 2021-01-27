@@ -3,12 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <nav></nav>
-    <main></main>
+    <nav>
+      <form>
+        <input
+          type="text"
+          name="city-input"
+          id="city-input"
+          placeholder="Type your city here"
+        />
+        <input type="submit" value="Search" autocomplete="off" />
+      </form>
+    </nav>
+    <main>
+      <div class="card">
+        <h1>Rio de Janeiro, RJ</h1>
+        <h2>☀️ Clear sky</h2>
+        <h3>31˚ C</h3>
+      </div>
+    </main>
     <footer></footer>
     <script src="src/app.js"></script>
   </body>
