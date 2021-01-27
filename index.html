@@ -16,25 +16,25 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap"
       rel="stylesheet"
     />
+    <!--Axios-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Document</title>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <nav>
-      <form>
-        <input
-          type="text"
-          name="city-input"
-          id="city-input"
-          placeholder="Type your city here"
-        />
+      <form id="search-form">
+        <input type="text" id="city-input" placeholder="Type your city here" />
         <input type="submit" value="Search" autocomplete="off" />
       </form>
     </nav>
     <main>
       <div class="card">
         <h1>Rio de Janeiro, RJ</h1>
-        <h2>☀️ Clear sky</h2>
+        <h2>
+          <span id="weather-icon"> ☀️ </span>
+          <span id="weather-description">Clear sky</span>
+        </h2>
         <h3>31˚ C</h3>
       </div>
     </main>

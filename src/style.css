@@ -12,12 +12,16 @@ h2 {
     line-height: 2.2;
 }
 
+h3 {
+font-size: 48px;
+}
+
 .card {
   padding: 30px;
   /*Morning sunny*/
   background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
 
-  
+
   border-radius: 20px;
 
 }
