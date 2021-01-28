@@ -10,6 +10,7 @@ form {
 
 h2 {
     line-height: 2.2;
+    text-transform: capitalize;
 }
 
 h3 {
@@ -22,5 +23,4 @@ font-size: 48px;
   background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
 
   border-radius: 20px;
-
 }
