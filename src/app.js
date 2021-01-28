@@ -2,6 +2,7 @@
 
 function handleSubmit(event) {
   event.preventDefault();
+  console.log(document.div);
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
@@ -13,6 +14,28 @@ function search(cityName){
     axios.get(apiUrl).then(displayCity);
 }
 
+let forecast = [
+  "Clear",
+  "Clouds",
+  "Thunderstorm",
+  "Drizzle",
+  "Rain",
+  "Snow",
+  "Mist",
+  "Smoke",
+  "Haze",
+  "Dust",
+  "Fog",
+  "Sand",
+  "Ash",
+  "Squall",
+  "Tornado"
+];
+
+  let colors = [
+    "linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)",
+    "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
+  ];
 
 function displayCity(response) {
   let forecast = document.querySelector("#weather-description");
@@ -30,6 +53,14 @@ function displayCity(response) {
 
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
+
+  let colorBackground = document.querySelector("div");
+  if (response.data.weather[0].main === "Clear"){
+    //document.getElementsByClassName('card').style.backgroundImage = colors[1];
+    colorBackground.style.backgroundImage = colors[0];
+    } else {
+    colorBackground.style.backgroundImage = colors[1];
+    }
 }
 
 search("New York");

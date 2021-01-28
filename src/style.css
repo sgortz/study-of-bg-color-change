@@ -5,22 +5,25 @@ body {
 }
 
 form {
-  margin: 30px;
+  margin: 10px;
 }
-
+h1 {
+    margin: 20px;
+}
 h2 {
-    line-height: 2.2;
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 h3 {
-font-size: 48px;
+  font-size: 48px;
 }
 
 .card {
-  padding: 30px;
-  /*Morning sunny*/
-  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
-
+  padding: 20px 30px;
+  background-color: antiquewhite;
+  /*Morning sunny
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);*/
+  /* Rain or cloudy
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);*/
   border-radius: 20px;
 }
