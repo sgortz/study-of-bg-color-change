@@ -7,11 +7,11 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-function search(cityName){
-    let apiKey = "4cea025489823b86da62835c695c95d3";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+function search(cityName) {
+  let apiKey = "4cea025489823b86da62835c695c95d3";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
 
-    axios.get(apiUrl).then(displayCity);
+  axios.get(apiUrl).then(displayCity);
 }
 
 let forecast = [
@@ -29,13 +29,13 @@ let forecast = [
   "Sand",
   "Ash",
   "Squall",
-  "Tornado"
+  "Tornado",
 ];
 
-  let colors = [
-    "linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)",
-    "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
-  ];
+let colors = [
+  "linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)",
+  "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
+];
 
 function displayCity(response) {
   let forecast = document.querySelector("#weather-description");
@@ -55,12 +55,12 @@ function displayCity(response) {
   h1.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
 
   let colorBackground = document.querySelector("div");
-  if (response.data.weather[0].main === "Clear"){
+  if (response.data.weather[0].main === "Clear") {
     //document.getElementsByClassName('card').style.backgroundImage = colors[1];
     colorBackground.style.backgroundImage = colors[0];
-    } else {
+  } else {
     colorBackground.style.backgroundImage = colors[1];
-    }
+  }
 }
 
 search("New York");

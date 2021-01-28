@@ -8,7 +8,7 @@ form {
   margin: 10px;
 }
 h1 {
-    margin: 20px;
+  margin: 20px;
 }
 h2 {
   text-transform: capitalize;
@@ -20,10 +20,25 @@ h3 {
 
 .card {
   padding: 20px 30px;
-  background-color: antiquewhite;
-  /*Morning sunny
-  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);*/
-  /* Rain or cloudy
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);*/
   border-radius: 20px;
+
+  /*clear sky nighttime
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  color: whitesmoke;
+  */
+  
+  background-image: linear-gradient(to top, #a1c4fd 0%, #c2e9fb 100%);
+  /*clear sky daylight
+  */
+  /*thunderstorm
+  background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+ background-blend-mode: normal, lighten, soft-light
+          */
+
+  /*snow
+          background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  */
+  /* Rain or cloudy
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  */
 }
