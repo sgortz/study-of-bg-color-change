@@ -1,37 +1,17 @@
 let apiKey = "4cea025489823b86da62835c695c95d3";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`;
 
 function displayCity(response) {
   console.log(response.data);
+  let forecast = document.querySelector("#weather-description");
+  forecast.innerHTML = response.data.weather[0].description;
+
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = Math.round(response.data.main.temp);
+
+  let weatherIcon = document.querySelector("#weather-icon");
+  weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
-axios.get(apiUrl).then(displayCity); 
+axios.get(apiUrl).then(displayCity);
 
-/* function searchCity(event) {
-    let form = document.querySelector("#search-form");
-    
-    
-    function search(event){
-        event.preventDefault();
-        let searchInput = document.querySelector("#city-input");
-        console.log(searchInput.value);
-    }
-    
-    
-    form.addEventListener("submit", search);
-  event.preventDefault();
-  let searchInput = document.querySelector("#city-input");
-  return(searchInput.value);
-}
-
-//let h1 = document.querySelector("h1");
-//h1.innerHTML = `${searchInput.value}`
-
-let form = document.querySelector("#search-form");
-  
-  form.addEventListener("submit", searchCity);
-  
-
-let cityName = searchCity();
-
-*/
