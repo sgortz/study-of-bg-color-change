@@ -11,20 +11,14 @@ h1 {
   margin: 20px;
 }
 
-h2 {
-  color: blue;
-}
-
 h3 {
   text-transform: capitalize;
-  color: red;
 }
 
 h3 img {
 }
 
 h4 {
-  color: green;
   font-size: 48px;
 }
 
