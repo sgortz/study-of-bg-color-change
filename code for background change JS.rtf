@@ -1,0 +1,39 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf610
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Italic;}
+{\colortbl;\red255\green255\blue255;\red246\green246\blue239;\red30\green31\blue41;\red252\green93\blue186;
+\red174\green122\blue247;\red72\green255\blue104;\red228\green242\blue113;\red238\green252\blue122;\red253\green170\blue90;
+}
+{\*\expandedcolortbl;;\cssrgb\c97255\c97255\c94902;\cssrgb\c15686\c16471\c21176;\cssrgb\c100000\c47451\c77647;
+\cssrgb\c74118\c57647\c97647;\cssrgb\c31373\c98039\c48235;\cssrgb\c91373\c94902\c51765;\cssrgb\c94510\c98039\c54902;\cssrgb\c100000\c72157\c42353;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \strokec4 let\cf2 \strokec2  colorBackground \cf4 \strokec4 =\cf2 \strokec2  \cf5 \strokec5 document\cf2 \strokec2 .\cf6 \strokec6 querySelector\cf2 \strokec2 (\cf7 \strokec7 "\cf8 \strokec8 .card\cf7 \strokec7 "\cf2 \strokec2 );\cb1 \
+\cb3   \cf4 \strokec4 if\cf2 \strokec2  (
+\f1\i \cf9 \strokec9 response
+\f0\i0 \cf2 \strokec2 .data.weather[\cf5 \strokec5 0\cf2 \strokec2 ].main \cf4 \strokec4 ===\cf2 \strokec2  forecast[\cf5 \strokec5 0\cf2 \strokec2 ] \cf4 \strokec4 &&\cf2 \strokec2  hour \cf4 \strokec4 <\cf2 \strokec2  \cf5 \strokec5 12\cf2 \strokec2 ) \{\cb1 \
+\cb3     colorBackground.style.backgroundImage \cf4 \strokec4 =\cf2 \strokec2  colors[\cf5 \strokec5 5\cf2 \strokec2 ];\cb1 \
+\cb3   \} \cf4 \strokec4 else\cf2 \strokec2  \cf4 \strokec4 if\cf2 \strokec2  (
+\f1\i \cf9 \strokec9 response
+\f0\i0 \cf2 \strokec2 .data.weather[\cf5 \strokec5 0\cf2 \strokec2 ].main \cf4 \strokec4 ===\cf2 \strokec2  forecast[\cf5 \strokec5 0\cf2 \strokec2 ] \cf4 \strokec4 &&\cf2 \strokec2  hour \cf4 \strokec4 >=\cf2 \strokec2  \cf5 \strokec5 12\cf2 \strokec2 ) \{\cb1 \
+\cb3     colorBackground.style.backgroundImage \cf4 \strokec4 =\cf2 \strokec2  colors[\cf5 \strokec5 0\cf2 \strokec2 ];\cb1 \
+\cb3   \} \cf4 \strokec4 else\cf2 \strokec2  \cf4 \strokec4 if\cf2 \strokec2  (
+\f1\i \cf9 \strokec9 response
+\f0\i0 \cf2 \strokec2 .data.weather[\cf5 \strokec5 0\cf2 \strokec2 ].main \cf4 \strokec4 ===\cf2 \strokec2  hour \cf4 \strokec4 <\cf2 \strokec2  \cf5 \strokec5 19\cf2 \strokec2 ) \{\cb1 \
+\cb3     colorBackground.style.backgroundImage \cf4 \strokec4 =\cf2 \strokec2  colors[\cf5 \strokec5 1\cf2 \strokec2 ];\cb1 \
+\cb3     colorBackground.style.color \cf4 \strokec4 =\cf2 \strokec2  \cf7 \strokec7 "\cf8 \strokec8 whitesmoke\cf7 \strokec7 "\cf2 \strokec2 ;\cb1 \
+\cb3   \} \cf4 \strokec4 else\cf2 \strokec2  \cf4 \strokec4 if\cf2 \strokec2  (
+\f1\i \cf9 \strokec9 response
+\f0\i0 \cf2 \strokec2 .data.weather[\cf5 \strokec5 0\cf2 \strokec2 ].main \cf4 \strokec4 ===\cf2 \strokec2  forecast[(\cf5 \strokec5 10\cf2 \strokec2 , \cf5 \strokec5 11\cf2 \strokec2 )]) \{\cb1 \
+\cb3     colorBackground.style.backgroundImage \cf4 \strokec4 =\cf2 \strokec2  colors[\cf5 \strokec5 3\cf2 \strokec2 ];\cb1 \
+\cb3   \} \cf4 \strokec4 else\cf2 \strokec2  \cf4 \strokec4 if\cf2 \strokec2  (
+\f1\i \cf9 \strokec9 response
+\f0\i0 \cf2 \strokec2 .data.weather[\cf5 \strokec5 0\cf2 \strokec2 ].main \cf4 \strokec4 ===\cf2 \strokec2  forecast[(\cf5 \strokec5 12\cf2 \strokec2 , \cf5 \strokec5 13\cf2 \strokec2 )]) \{\cb1 \
+\cb3     colorBackground.style.backgroundImage \cf4 \strokec4 =\cf2 \strokec2  colors[\cf5 \strokec5 4\cf2 \strokec2 ];\cb1 \
+\cb3   \} \cf4 \strokec4 else\cf2 \strokec2  \{\cb1 \
+\cb3     colorBackground.style.backgroundImage \cf4 \strokec4 =\cf2 \strokec2  colors[\cf5 \strokec5 2\cf2 \strokec2 ];\cb1 \
+\cb3   \}\cb1 \
+}

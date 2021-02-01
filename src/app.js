@@ -83,7 +83,7 @@ function displayCity(response) {
     colorBackground.style.backgroundImage = colors[0];
   } else if (response.data.weather[0].main === hour < 19) {
     colorBackground.style.backgroundImage = colors[1];
-    colorBackground.style.color = "white";
+    colorBackground.style.color = "whitesmoke";
   } else if (response.data.weather[0].main === forecast[(10, 11)]) {
     colorBackground.style.backgroundImage = colors[3];
   } else if (response.data.weather[0].main === forecast[(12, 13)]) {
