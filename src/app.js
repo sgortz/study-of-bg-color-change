@@ -76,14 +76,15 @@ function displayCity(response) {
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
 
+  let apiIconResponse = response.data.weather[0].icon;
   let colorBackground = document.querySelector("div");
-  if (response.data.weather[0].main === forecast[0] && hour < 12) {
+  if (apiIconResponse.includes("n")) {
+    colorBackground.style.backgroundImage = colors[1];
+    colorBackground.style.color = "whitesmoke";
+  } else if (response.data.weather[0].main === forecast[0] && hour < 12) {
     colorBackground.style.backgroundImage = colors[5];
   } else if (response.data.weather[0].main === forecast[0] && hour >= 12) {
     colorBackground.style.backgroundImage = colors[0];
-  } else if (response.data.weather[0].main === hour < 19) {
-    colorBackground.style.backgroundImage = colors[1];
-    colorBackground.style.color = "whitesmoke";
   } else if (response.data.weather[0].main === forecast[(10, 11)]) {
     colorBackground.style.backgroundImage = colors[3];
   } else if (response.data.weather[0].main === forecast[(12, 13)]) {
